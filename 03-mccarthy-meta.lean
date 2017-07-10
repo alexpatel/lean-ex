@@ -12,7 +12,8 @@ meta def mninetyone : ℕ → ℕ
 
 meta def print_mninetyones : ℕ → io unit
 | 0 := return ()
-| (succ n) := print_mninetyones n >> put_str ("m91(" ++ nat.to_string n ++ ") = " ++ nat.to_string (mninetyone n) ++ "\n")
+| (succ n) := print_mninetyones n >> put_str ("m91(" ++ nat.to_string n ++ ") = "
+                                              ++ nat.to_string (mninetyone n) ++ "\n")
 
 #eval mninetyone 1
 #eval mninetyone 49
