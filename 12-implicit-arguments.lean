@@ -1,3 +1,4 @@
+
 namespace myspace
   universe u
   variable α : Type 
@@ -14,9 +15,26 @@ namespace myspace
   #check list
 
   #check cons α nil
+end myspace
 
+namespace ident
+  universe u
+  variable α : Type 
+  variable b : α 
   def identity {α : Type u} (x : α) := x
   #check identity
   #check identity 0
   #eval identity 0
-end myspace
+end ident
+
+namespace impl
+  universe w
+  variable {α : Type w}
+  variable a : α 
+  def ident := a
+end impl
+
+open impl
+#check ident
+#check ident 4
+#eval ident 4

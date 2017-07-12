@@ -33,7 +33,6 @@ constants γ : Type → Type
 
 #check g
 #check g a a
-#check g' a a
 #check g'' a a
 
 #check (a, a).1
