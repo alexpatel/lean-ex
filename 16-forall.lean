@@ -2,7 +2,7 @@ namespace forall_conjunct_left
   variables (α : Type) (p q : α → Prop)
   example : (∀ x : α, p x ∧ q x) → ∀ y : α, p y :=
     assume h : ∀ x : α , p x ∧ q x,
-    take k : α, 
+    assume k : α, 
     show p k, from (h k).left
 end forall_conjunct_left
 
